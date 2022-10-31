@@ -1,23 +1,23 @@
-import { rovingIndex } from 'https://cdn.skypack.dev/roving-ux';
+import { rovingIndex } from "https://cdn.skypack.dev/roving-ux";
 
-const menu = document.querySelector('.threeD-button-set');
+const menu = document.querySelector(".threeD-button-set");
 const menuRect = menu.getBoundingClientRect();
 
 const { matches: motionOK } = window.matchMedia(
-  '(prefers-reduced-motion: no-preference)'
+  "(prefers-reduced-motion: no-preference)"
 );
 
 rovingIndex({
-  element: document.querySelector('.threeD-button-set'),
-  target: 'button',
+  element: document.querySelector(".threeD-button-set"),
+  target: "button",
 });
 
 if (motionOK) {
-  window.addEventListener('mousemove', ({ target, clientX, clientY }) => {
+  window.addEventListener("mousemove", ({ target, clientX, clientY }) => {
     const { dx, dy } = getAngles(clientX, clientY);
 
-    menu.style.setProperty('--x', `${dy / 20}deg`);
-    menu.style.setProperty('--y', `${dx / 20}deg`);
+    menu.style.setProperty("--x", `${dy / 20}deg`);
+    menu.style.setProperty("--y", `${dx / 20}deg`);
   });
 }
 
