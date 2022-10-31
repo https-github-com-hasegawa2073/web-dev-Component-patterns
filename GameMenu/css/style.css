@@ -18,7 +18,7 @@ body {
   --_btn-bg-hover: var(--theme-bg-hover);
   --_btn-text: var(--theme-text);
   --_btn-text-shadow: var(--theme-shadow);
-  --_bounce-ease: cubic-bezier(.5, 1.75, .75, 1.25);
+  --_bounce-ease: cubic-bezier(0.5, 1.75, 0.75, 1.25);
   /* remove <ul> margins */
   margin: 0;
   /* vertical rag-right layout */
@@ -62,7 +62,7 @@ body {
 @media (--HDcolor) {
   @supports (color: color(display-p3 0 0 0)) {
     .threeD-button-set {
-      --theme: color(display-p3 .4 0 .9);
+      --theme: color(display-p3 0.4 0 0.9);
     }
   }
 }
